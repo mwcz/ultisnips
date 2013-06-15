@@ -81,6 +81,17 @@ def foldmarker():
     "Return a tuple of (open fold marker, close fold marker)"
     return vim.eval("&foldmarker").split(",")
 
+def get_date():
+    from datetime import datetime
+    return datetime.now().strftime("%Y-%m-%d")
+
+def get_time():
+    from datetime import datetime
+    return datetime.now().strftime("%H:%M:%S")
+
+def get_datetime():
+    return " ".join( [ get_date(), get_time() ] )
+
 endglobal
 
 snippet box "A nice box with the current comment symbol" b
@@ -126,6 +137,22 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
 tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
 vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
 no sea takimata sanctus est Lorem ipsum dolor sit amet.
+endsnippet
+
+###################
+#  DATE SNIPPETS  #
+###################
+
+snippet date "Today's date"
+`!p snip.rv = get_date()`
+endsnippet
+
+snippet time "Current time"
+`!p snip.rv = get_time()`
+endsnippet
+
+snippet datetime "Current datetime"
+`!p snip.rv = get_datetime()`
 endsnippet
 
 # vim:ft=snippets:
