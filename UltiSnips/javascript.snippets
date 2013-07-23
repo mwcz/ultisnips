@@ -39,6 +39,10 @@ snippet has "hasOwnProperty"
 hasOwnProperty(${1})
 endsnippet
 
+snippet tou "typeof === 'undefined'"
+typeof ${1:object}$0 === "undefined"
+endsnippet
+
 ###############
 # OO snippets #
 ###############
@@ -69,7 +73,7 @@ function ${1:Singleton} (${2:argument}) {
 	$1 = function $1($2) {
 		return instance;
 	};
-	
+
 	// carry over the prototype properties
 	$1.prototype = this;
 
