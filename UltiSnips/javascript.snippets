@@ -34,8 +34,6 @@ snippet : "Object key key: 'value'"
 ${1:key}: ${2:"${3:value}"}${4:, }
 endsnippet
 
-# doesn't work...
-<<<<<<< HEAD
 snippet .*has "hasOwnProperty" r
 hasOwnProperty(${1})
 endsnippet
@@ -44,12 +42,6 @@ snippet tou "typeof === 'undefined'"
 typeof ${1:object}$0 === "undefined"
 endsnippet
 
-=======
-snippet has "hasOwnProperty"
-hasOwnProperty(${1})
-endsnippet
-
->>>>>>> organize javaascript snippets and add some ones from snipmate
 ###############
 # OO snippets #
 ###############
@@ -59,8 +51,6 @@ ${1:class_name}.prototype.${2:method_name} = function(${3:first_argument}) {
 	${VISUAL}$0
 };
 endsnippet
-<<<<<<< HEAD
-=======
 
 snippet sdf "self-defining function"
 var ${1:function_name} = function (${2:argument}) {
@@ -70,19 +60,6 @@ var ${1:function_name} = function (${2:argument}) {
 		${4:${VISUAL:\/\/ main code}}
 	};
 };
-<<<<<<< HEAD
->>>>>>> organize javaascript snippets and add some ones from snipmate
-
-snippet sdf "self-defining function"
-var ${1:function_name} = function (${2:argument}) {
-	${3:// initial code ...}
-
-	$1 = function ($2) {
-		${4:${VISUAL:\/\/ main code}}
-	};
-};
-=======
->>>>>>> add console debugging snippets
 endsnippet
 
 snippet sing "singleton"
@@ -94,11 +71,7 @@ function ${1:Singleton} (${2:argument}) {
 	$1 = function $1($2) {
 		return instance;
 	};
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> organize javaascript snippets and add some ones from snipmate
 	// carry over the prototype properties
 	$1.prototype = this;
 
@@ -108,15 +81,7 @@ function ${1:Singleton} (${2:argument}) {
 	// reset the constructor pointer
 	instance.constructor = $1;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	${3:${VISUAL:\/\/ code ...}}
-=======
-	${3:// code ...}
->>>>>>> organize javaascript snippets and add some ones from snipmate
-=======
-	${3:${VISUAL:\/\/ code ...}}
->>>>>>> add VISUAL tags to some js snippets
 
 	return instance;
 }
@@ -129,32 +94,14 @@ endsnippet
 snippet for "for (...) {...}"
 var ${1:i};
 for ($1 = 0; $1 < ${2:Things}.length; $1 += 1) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-	${3:$2[$1]};
-	${VISUAL}$0
-=======
 	${3:$2[$1]}${VISUAL}$0
->>>>>>> organize javaascript snippets and add some ones from snipmate
-=======
-	${3:$2[$1]};
-	${VISUAL}$0
->>>>>>> add VISUAL tags to some js snippets
 }
 endsnippet
 
 snippet forr "for (...) {...} (faster)"
 var ${1:i};
 for ($1 = ${2:Things}.length - 1; $1 >= 0; $1 -= 1){
-<<<<<<< HEAD
-<<<<<<< HEAD
-	${3:$2[$1]};
-=======
 	${3:$2[$1]}${VISUAL}$0
-=======
-	${3:$2[$1]};
-	${VISUAL}$0
->>>>>>> add VISUAL tags to some js snippets
 }
 endsnippet
 
@@ -167,12 +114,10 @@ endsnippet
 
 snippet wh "while (...) {...}"
 while (${1:condition}) {
->>>>>>> organize javaascript snippets and add some ones from snipmate
 	${VISUAL}$0
 }
 endsnippet
 
-<<<<<<< HEAD
 snippet fori "for (property in object ) { ... }"
 var ${1:prop};
 for ($1 in ${2:Things}) {
@@ -189,11 +134,6 @@ endsnippet
 snippet do "do...while"
 do {
 	${VISUAL}$0
-=======
-snippet do "do...while"
-do {
-	${VISUAL}$0
->>>>>>> organize javaascript snippets and add some ones from snipmate
 } while (${1:/* condition */});
 endsnippet
 
@@ -209,17 +149,8 @@ endsnippet
 
 snippet ife "if ___ else"
 if (${1:condition}) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 	${2:${VISUAL:\/\/ code ...}}
-=======
-	${2://code}
->>>>>>> organize javaascript snippets and add some ones from snipmate
-=======
-	${2:${VISUAL:\/\/ code ...}}
->>>>>>> add VISUAL tags to some js snippets
-}
-else {
+} else {
 	${3://code}
 }
 endsnippet
@@ -234,15 +165,7 @@ endsnippet
 
 snippet try "try catch construct"
 try {
-<<<<<<< HEAD
-<<<<<<< HEAD
 	${1:${VISUAL:\/\/ code ...}}
-=======
-	${1:/* code */}
->>>>>>> organize javaascript snippets and add some ones from snipmate
-=======
-	${1:${VISUAL:\/\/ code ...}}
->>>>>>> add VISUAL tags to some js snippets
 } catch (${2:e}) {
 	${3:/* handle error */}
 }
@@ -255,8 +178,6 @@ switch (${1:expression}) {
 		break;
 	${5}
 	default:
-<<<<<<< HEAD
-<<<<<<< HEAD
 		${2:${VISUAL:\/\/ code ...}}
 }
 endsnippet
@@ -284,14 +205,6 @@ function ${1:function_name} (${2:argument}) {
 }
 endsnippet
 
-=======
-		${2:// code}
-=======
-		${2:${VISUAL:\/\/ code ...}}
->>>>>>> add VISUAL tags to some js snippets
-}
-endsnippet
-
 snippet case "case clause"
 case '${1:case}':
 	${2:${VISUAL:\/\/ code ...}}
@@ -315,7 +228,6 @@ function ${1:function_name} (${2:argument}) {
 }
 endsnippet
 
->>>>>>> organize javaascript snippets and add some ones from snipmate
 snippet iife "Immediately-Invoked Function Expression (iife)"
 (function (${1:argument}) {
 	${VISUAL}$0
